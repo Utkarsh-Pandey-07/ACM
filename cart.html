@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anon</title>
+    <link rel="shortcut icon" type="image" href="assets/favicon.ico" />
+    <link rel="stylesheet" , href="styles.css">
+    <link rel="stylesheet" , href="https://cdn.cdnhub.io/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html">
+            <img class="Logo" src="assets/images/logo/logo.svg" alt="Logo">
+        </a>
+        <div>
+            <ul id="navbar">
+                <!-- <a href="#" id="close"><i class="far fa-times"></i></a> -->
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="shop.html">Shop</a> </li>
+                <li> <a href="blog.html">Blog</a> </li>
+                <li> <a href="about.html">About</a> </li>
+                <li> <a href="contact.html">Contact Us</a> </li>
+                <!-- <li> <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> </li> -->
+                <li> <a class="active" href="cart.html"><img
+                            src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" class="shopping-cart"
+                            alt=""></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+
+    </section>
+    <section class="page-header  cart-header">
+
+        <h2>#FashionFrenzyCheckout</h2>
+
+        <p>Time's ticking! Secure your favorites before they're gone.</p>
+
+    </section>
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Images</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/f1.jpg"></td>
+                    <td>Yellow Floral Print Short Sleeve Shirts</td>
+                    <td>₹2600</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/f2.jpg"></td>
+                    <td>Green Floral Print Short Sleeve Shirts</td>
+                    <td>₹2600</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/f3.jpg"></td>
+                    <td>Yellow Floral Print Short Sleeve Shirts</td>
+                    <td>₹2600</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/f4.jpg"></td>
+                    <td>Yellow Floral Print Short Sleeve Shirts</td>
+                    <td>₹2600</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/jacket-1.jpg"></td>
+                    <td>Men's Denim Jackets</td>
+                    <td>₹2300</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/jacket-2.jpg"></td>
+                    <td>Men's Denim Jackets</td>
+                    <td>₹2300</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/jacket-3.jpg"></td>
+                    <td>Men's Denim Jackets</td>
+                    <td>₹2300</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="assets/images/products/jacket-4.jpg"></td>
+                    <td>Men's Denim Jackets</td>
+                    <td>₹2300</td>
+                    <td><input type="number" value="0" min="0" class="quantity" onchange="calculateSubtotal(this)"></td>
+                    <td>₹0</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Use Your Coupon Now">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Total</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="cart-subtotal">₹0</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="final-total">₹0</td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="assets/images/logo/logo.svg" alt="Logo">
+            <h4>Contact Us</h4>
+            <p><strong>Address:</strong> Room No.-30, JADE Hostel, NIT Trichy </p>
+            <p><strong>Phone:</strong> +917800095295</p>
+            <div class="Follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="https://www.instagram.com/_utkarsh__pandey_?igsh=MTIxc3g2b3BtaXNocg=="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100015216078163"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Store</p>
+            <div class="row">
+                <img src="assets/pay/play.jpg" alt="Play Store">
+                <img src="assets/pay/app.jpg" alt="Apple Store">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="assets/pay/pay.png">
+        </div>
+        <div class="copyright section-p1">
+            <p>@2024, Utkarsh Pandey</p>
+        </div>
+    </footer>
+    <script>
+        function calculateSubtotal(input) {
+            const price = input.parentNode.previousElementSibling.innerText.replace('₹', '');
+            const quantity = input.value;
+            const subtotal = price * quantity;
+            input.parentNode.nextElementSibling.innerText = `₹${subtotal}`;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll('#cart tbody tr').forEach(row => {
+                const subtotal = parseFloat(row.querySelector('td:nth-child(6)').innerText.replace('₹', ''));
+                total += subtotal;
+            });
+            const cartSubtotalElement = document.getElementById('cart-subtotal');
+            cartSubtotalElement.innerText = `₹${total}`;
+            const finalTotalElement = document.getElementById('final-total');
+            finalTotalElement.innerText = `₹${total}`;
+        }
+    </script>
+</body>
+
+</html>
